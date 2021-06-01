@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Multiplicación</title>
+</head>
+<body>
+    
+    <script>
+        do {
+            var num = +prompt("ingrese un numero: ");
+        } while(num < 1 || num > 20);
+
+        let validaNumero = () => {
+            if (num >= 1 && num <= 20){
+                for(var i = 1; i <= num; i++){
+                    //For a partir del numero ingresado por el usuario
+                    //imprime tablas
+                    const resultado = num * i;
+                    document.write(i +" X " + num + " = " + resultado + "<br>");
+                }
+
+                for(var i = 1; i <= num; i++){
+                    let factorial = 1;
+                    for(let x = 1; x <= i; x++){
+                        factorial *= x;
+                    }
+
+                    document.write(`Factorial de ${i} es: ${factorial} <br>`);
+                }
+            } else {
+                alert(`El número ingresado está fuera de rango`);
+            }
+        }
+        validaNumero();
+
+    </script>
+</body>
+</html>
